@@ -1,9 +1,13 @@
-import { describe, it } from "vitest";
+import { expect, describe, it } from "vitest";
 import { isActivePath } from "./userInterface";
 
 describe("isActivePath", () => {
   // Test 1: Verify exact path match
-  it("Returns true when current path matches href exactly", () => {});
+  it("Returns true when current path matches href exactly", () => {
+    expect(isActivePath("/login", "/login")).toBe(true);
+    expect(isActivePath("/register", "/register")).toBe(true);
+    expect(isActivePath("/venue", "/venue")).toBe(true);
+  });
 
   // Test 2: Verify root path variations
   it("Returns true for root path ('/') when path is '/' or '/index.html'", () => {
@@ -12,7 +16,10 @@ describe("isActivePath", () => {
   });
 
   // Test 3: Verify partial matches
-  it("Returns true when current path includes the href", () => {});
+  it("Returns true when current path includes the href", () => {
+    expect(isActivePath("/venue", "/venue/?id=123")).toBe(true);
+    expect(isActivePath("/venue", "/venue/?id=abc-def")).toBe(true);
+  });
 
   // Test 4: Verify no matches in path
   it("Returns false when paths don't match", () => {
