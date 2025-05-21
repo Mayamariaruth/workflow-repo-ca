@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "npx tailwindcss -i ./css/input.css -o ./css/style.css --watch",
     "prepare": "husky install",
-    "test": "vitest"
+    "test": "vitest",
+    "start": "live-server --port=5500"
   },
   "keywords": [],
   "author": "",
@@ -31,5 +32,8 @@
       "eslint --cache --fix"
     ],
     "*.{css,html,md}": "prettier --write"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
   }
 }
