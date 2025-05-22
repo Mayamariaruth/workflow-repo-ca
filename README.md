@@ -50,7 +50,7 @@ npm run test:e2e
 
 ## Environment Variables
 
-Create a `.env` file in the root directory with below key values:
+Create a `.env` file in the root directory and define your own values for the following variables:
 
 ```bash
 VITE_USERNAME=your-username
@@ -85,4 +85,4 @@ All changes are made on a workflow branch. A Pull Request has been opened from t
 
 ## Author
 
-GitHub username = [Mayamariaruth](https://github.com/Mayamariaruth)
+- **GitHub:** [Mayamariaruth](https://github.com/Mayamariaruth)
